@@ -28,18 +28,19 @@ export const game = () => {
   for (let i = 0; i < 3; i += 1) {
     const number = num();
     const answer = getAnswer(number);
+    let corrAnswer = '';
     let wrongAnsw = '';
-    if (answer === 'yes') {
+    if (number % 2 === 0){
+      corrAnswer = 'yes';
       wrongAnsw = 'no';
     } else {
+      corrAnswer = 'no';
       wrongAnsw = 'yes';
     }
-    if (number % 2 === 0 && answer === 'yes') {
-      console.log('Correct!');
-    } else if (number % 2 !== 0 && answer === 'no') {
+    if (answer === corrAnswer) {
       console.log('Correct!');
     } else {
-      wrongAnswer(name, answer, wrongAnsw);
+      wrongAnswer(name, answer, corrAnswer);
       break;
     }
     if (i === 2) {
