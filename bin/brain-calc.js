@@ -1,5 +1,7 @@
 #!/usr/bin/env node
-import {sayHello, rndNum, getAnswer, wrongAnswer} from '../src/index.js';
+import {
+  sayHello, rndNum, getAnswer, wrongAnswer,
+} from '../src/index.js';
 
 const game = () => {
   const name = sayHello();
@@ -13,14 +15,12 @@ const game = () => {
 
     const question = `${firstNumber} ${operator} ${secondNumber}`;
     let correctAnswer = 0;
-    if (operatorInd === 0){
-        correctAnswer = firstNumber + secondNumber;
+    if (operatorInd === 0) {
+      correctAnswer = firstNumber + secondNumber;
+    } else if (operatorInd === 1) {
+      correctAnswer = firstNumber - secondNumber;
     } else {
-        if (operatorInd === 1){
-            correctAnswer = firstNumber - secondNumber;
-        } else {
-            correctAnswer = firstNumber * secondNumber;
-        }
+      correctAnswer = firstNumber * secondNumber;
     }
     const answer = getAnswer(question);
     if (correctAnswer == answer) {

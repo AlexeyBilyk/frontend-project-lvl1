@@ -1,5 +1,7 @@
 #!/usr/bin/env node
-import {sayHello, rndNum, getAnswer, wrongAnswer} from '../src/index.js';
+import {
+  sayHello, rndNum, getAnswer, wrongAnswer,
+} from '../src/index.js';
 
 const game = () => {
   const name = sayHello();
@@ -9,7 +11,7 @@ const game = () => {
     const answer = getAnswer(number);
     let corrAnswer = '';
     let wrongAnsw = '';
-    if (number % 2 === 0){
+    if (number % 2 === 0) {
       corrAnswer = 'yes';
       wrongAnsw = 'no';
     } else {
