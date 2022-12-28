@@ -7,8 +7,8 @@ export const sayHello = () => {
   return name;
 };
 
-export const rndNum = () => {
-  const number = (Math.round(Math.random() * 100));
+export const rndNum = (min, max) => {
+  const number = Math.round(Math.random() * (max - min)) + min;
   return number;
 };
 

@@ -7,8 +7,8 @@ const game = () => {
   const name = sayHello();
   console.log('What is the result of the expression?');
   for (let i = 0; i < 3; i += 1) {
-    const firstNumber = rndNum();
-    const secondNumber = rndNum();
+    const firstNumber = rndNum(1, 100);
+    const secondNumber = rndNum(1, 100);
     const operators = ['+', '-', '*'];
     const operatorInd = Math.floor(Math.random() * operators.length);
     const operator = operators[operatorInd];
