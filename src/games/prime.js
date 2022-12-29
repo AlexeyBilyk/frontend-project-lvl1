@@ -7,11 +7,16 @@ export const game = () => {
   const name = sayHello();
   console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
   for (let i = 0; i < 3; i += 1) {
-    const number = rndNum(1, 100);
+    const number = rndNum(1, 1);
     const answer = getAnswer(number);
     let corrAnswer = '';
     let wrongAnsw = '';
+    if (number <= 2){
+      corrAnswer = 'yes';
+      wrongAnsw = 'no';
+    }
     for (let i = 2; i < number; i += 1) {
+      
       if (number % i === 0) {
         corrAnswer = 'no';
         wrongAnsw = 'yes';
