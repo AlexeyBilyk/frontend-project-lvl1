@@ -3,7 +3,7 @@ import {
   sayHello, rndNum, getAnswer, wrongAnswer,
 } from '../index.js';
 
-export const game = () => {
+const game = () => {
   const name = sayHello();
   console.log('What number is missing in the progression?');
   for (let i = 0; i < 3; i += 1) {
@@ -32,3 +32,4 @@ export const game = () => {
     }
   }
 };
+export default game;

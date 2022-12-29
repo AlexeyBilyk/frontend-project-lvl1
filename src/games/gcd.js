@@ -3,7 +3,7 @@ import {
   sayHello, rndNum, getAnswer, wrongAnswer, getCorrectGCD,
 } from '../index.js';
 
-export const game = () => {
+const game = () => {
   const name = sayHello();
   console.log('Find the greatest common divisor of given numbers.');
   for (let i = 0; i < 3; i += 1) {
@@ -24,3 +24,4 @@ export const game = () => {
     }
   }
 };
+export default game;
