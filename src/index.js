@@ -20,3 +20,10 @@ export const getAnswer = (number) => {
 export const wrongAnswer = (name, answerWr, answerCor) => {
   console.log(`'${answerWr}' is wrong answer ;(. Correct answer was '${answerCor}'. Let's try again, ${name}!`);
 };
+
+export const getCorrectGCD = (firstNumber, secondNumber) => {
+  if (!secondNumber) {
+    return firstNumber;
+  }
+  return getCorrectGCD(secondNumber, firstNumber % secondNumber);
+};
