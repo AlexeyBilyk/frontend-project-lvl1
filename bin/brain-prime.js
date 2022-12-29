@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import {
-  game
+  game,
 } from '../src/games/prime.js';
 
 game();

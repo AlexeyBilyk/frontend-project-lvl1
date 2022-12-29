@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 import {
-  game
+  game,
 } from '../src/games/progression.js';
+
 game();
