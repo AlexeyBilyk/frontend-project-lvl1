@@ -11,13 +11,12 @@ export const game = () => {
     const answer = getAnswer(number);
     let corrAnswer = '';
     let wrongAnsw = '';
-    if (number <= 2){
+    if (number <= 2) {
       corrAnswer = 'yes';
       wrongAnsw = 'no';
     }
-    for (let i = 2; i < number; i += 1) {
-      
-      if (number % i === 0) {
+    for (let y = 2; y < number; y += 1) {
+      if (number % y === 0) {
         corrAnswer = 'no';
         wrongAnsw = 'yes';
         break;

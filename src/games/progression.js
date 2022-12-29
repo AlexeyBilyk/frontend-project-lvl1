@@ -8,12 +8,12 @@ export const game = () => {
   console.log('What number is missing in the progression?');
   for (let i = 0; i < 3; i += 1) {
     const arrayLength = rndNum(5, 10);
-    const array = Array(arrayLength).map((_, i) => i);
+    const array = Array(arrayLength).map((_, y) => y);
 
     array[0] = rndNum(1, 100);
     const progression = rndNum(1, 8);
-    for (let i = 1; i < arrayLength + 1; i += 1) {
-      array[i] = array[i - 1] + progression;
+    for (let u = 1; u < arrayLength + 1; u += 1) {
+      array[u] = array[u - 1] + progression;
     }
 
     const correctAnswerIndex = rndNum(1, arrayLength - 1);
