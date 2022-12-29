@@ -13,7 +13,7 @@ export const game = () => {
     const answer = getAnswer(question);
     const correctAnswer = getCorrectGCD(firstNumber, secondNumber);
 
-    if (correctAnswer == answer) {
+    if (correctAnswer.toString() === answer.toString()) {
       console.log('Correct!');
     } else {
       wrongAnswer(name, answer, correctAnswer);

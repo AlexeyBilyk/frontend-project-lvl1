@@ -21,7 +21,7 @@ export const game = () => {
     array[correctAnswerIndex] = '..';
     const question = array.join(' ');
     const answer = getAnswer(question);
-    if (correctAnswer == answer) {
+    if (correctAnswer.toString() === answer.toString()) {
       console.log('Correct!');
     } else {
       wrongAnswer(name, answer, correctAnswer);

@@ -23,7 +23,7 @@ export const game = () => {
       correctAnswer = firstNumber * secondNumber;
     }
     const answer = getAnswer(question);
-    if (correctAnswer == answer) {
+    if (correctAnswer.toString() === answer.toString()) {
       console.log('Correct!');
     } else {
       wrongAnswer(name, answer, correctAnswer);
