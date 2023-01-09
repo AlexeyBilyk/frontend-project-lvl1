@@ -1,10 +1,10 @@
 #!/usr/bin/env node
 import {
-  sayHello, rndNum, getAnswer, wrongAnswer, getCorrectGCD,
+  Welcome, rndNum, getAnswer, wrongAnswer, getCorrectGCD,
 } from '../index.js';
 
-const game = () => {
-  const name = sayHello();
+const runGCDgame = () => {
+  const name = Welcome();
   console.log('Find the greatest common divisor of given numbers.');
   for (let i = 0; i < 3; i += 1) {
     const firstNumber = rndNum(1, 100);
@@ -24,4 +24,4 @@ const game = () => {
     }
   }
 };
-export default game;
+export default runGCDgame;

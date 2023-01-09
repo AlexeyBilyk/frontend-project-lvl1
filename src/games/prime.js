@@ -1,10 +1,10 @@
 #!/usr/bin/env node
 import {
-  sayHello, rndNum, getAnswer, wrongAnswer,
+  Welcome, rndNum, getAnswer, wrongAnswer,
 } from '../index.js';
 
-const game = () => {
-  const name = sayHello();
+const runPrimeGame = () => {
+  const name = Welcome();
   console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
   for (let i = 0; i < 3; i += 1) {
     const number = rndNum(2, 100);
@@ -32,4 +32,4 @@ const game = () => {
     }
   }
 };
-export default game;
+export default runPrimeGame;

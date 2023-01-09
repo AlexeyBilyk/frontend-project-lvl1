@@ -1,10 +1,10 @@
 #!/usr/bin/env node
 import {
-  sayHello, rndNum, getAnswer, wrongAnswer,
+  Welcome, rndNum, getAnswer, wrongAnswer,
 } from '../index.js';
 
-const game = () => {
-  const name = sayHello();
+const runEvenGame = () => {
+  const name = Welcome();
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
   for (let i = 0; i < 3; i += 1) {
     const number = rndNum(1, 100);
@@ -26,4 +26,4 @@ const game = () => {
     }
   }
 };
-export default game;
+export default runEvenGame;

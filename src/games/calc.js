@@ -1,10 +1,10 @@
 #!/usr/bin/env node
 import {
-  sayHello, rndNum, getAnswer, wrongAnswer,
+  Welcome, rndNum, getAnswer, wrongAnswer,
 } from '../index.js';
 
-const game = () => {
-  const name = sayHello();
+const runCulcGame = () => {
+  const name = Welcome();
   console.log('What is the result of the expression?');
   for (let i = 0; i < 3; i += 1) {
     const firstNumber = rndNum(1, 100);
@@ -34,4 +34,4 @@ const game = () => {
     }
   }
 };
-export default game;
+export default runCulcGame;

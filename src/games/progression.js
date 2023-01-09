@@ -1,10 +1,10 @@
 #!/usr/bin/env node
 import {
-  sayHello, rndNum, getAnswer, wrongAnswer,
+  Welcome, rndNum, getAnswer, wrongAnswer,
 } from '../index.js';
 
-const game = () => {
-  const name = sayHello();
+const runProgressionGame = () => {
+  const name = Welcome();
   console.log('What number is missing in the progression?');
   for (let i = 0; i < 3; i += 1) {
     const arrayLength = rndNum(5, 10);
@@ -32,4 +32,4 @@ const game = () => {
     }
   }
 };
-export default game;
+export default runProgressionGame;

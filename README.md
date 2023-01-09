@@ -5,6 +5,17 @@
 ### CodeClimate maintainability badge
 [![Maintainability](https://api.codeclimate.com/v1/badges/bf690bd0254251b90278/maintainability)](https://codeclimate.com/github/AlexeyBilyk/frontend-project-lvl1/maintainability)
 
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?color=%2336BCF7&lines=Hello+how+are+you+?)](https://git.io/typing-svg)
+
+clone repo, in terminal write one of the teams:
+<ol>
+  <li>braine-even</li>
+  <li>brain-calc</li>
+  <li>brain-prime</li>
+  <li>brain-gcd</li>
+  <li>brain-progression</li>
+</ol>
+
 ### asciinema brain-even
 [![asciicast](https://asciinema.org/a/bQSfuTD4zN3FWak1Xg3f0XjpK.svg)](https://asciinema.org/a/bQSfuTD4zN3FWak1Xg3f0XjpK)
 

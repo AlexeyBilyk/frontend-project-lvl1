@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync';
 
-export const sayHello = () => {
+export const Welcome = () => {
   console.log('Welcome to the Brain Games!');
   const name = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${name}!`);
@@ -8,7 +8,7 @@ export const sayHello = () => {
 };
 
 export const rndNum = (min, max) => {
-  const number = Math.round(Math.random() * (max - min + 1)) + min;
+  const number = Math.round(Math.random() * (max - min)) + min;
   return number;
 };
 
