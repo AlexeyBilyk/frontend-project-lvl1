@@ -14,7 +14,7 @@
 ### Install
 
 ```
-$ git clone git@github.com:ElenaEremenko/frontend-project-lvl1.git
+$ git clone git@github.com:AlexeyBilyk/frontend-project-lvl1.git
 $ cd frontend-project-lvl1
 $ npm link
 ```
