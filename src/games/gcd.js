@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import { getRandomInRange } from '../utils.js';
 import {
-  welcome, getAnswer, wrongAnswer, getCorrectGCD, engine,
+  getCorrectGCD, engine,
 } from '../index.js';
 
 const runGCDgame = () => {
