@@ -23,16 +23,16 @@ $ npm link
 [![Maintainability](https://api.codeclimate.com/v1/badges/bf690bd0254251b90278/maintainability)](https://codeclimate.com/github/AlexeyBilyk/frontend-project-lvl1/maintainability)
 
 ### asciinema brain-even
-[![asciicast](https://asciinema.org/a/bQSfuTD4zN3FWak1Xg3f0XjpK.svg)](https://asciinema.org/a/bQSfuTD4zN3FWak1Xg3f0XjpK)
+[![asciicast](https://asciinema.org/a/33x6Z8tSi5RaILZ0aLFYy2R8o.svg)](https://asciinema.org/a/33x6Z8tSi5RaILZ0aLFYy2R8o)
 
 ### asciinema brain-calc
-[![asciicast](https://asciinema.org/a/uT22z29sGognSAcO4meVkWdkE.svg)](https://asciinema.org/a/uT22z29sGognSAcO4meVkWdkE)
+[![asciicast](https://asciinema.org/a/35B3EZo2vgwoksJeak6lKwAc7.svg)](https://asciinema.org/a/35B3EZo2vgwoksJeak6lKwAc7)
 
 ### asciinema brain-gcd
-[![asciicast](https://asciinema.org/a/skWBUev9uq6ppjkrVIsMBN2OK.svg)](https://asciinema.org/a/skWBUev9uq6ppjkrVIsMBN2OK)
+[![asciicast](https://asciinema.org/a/sXF3D8TAPxBrUhCK5nJZXQNK4.svg)](https://asciinema.org/a/sXF3D8TAPxBrUhCK5nJZXQNK4)
 
 ### asciinema brain-progression
-[![asciicast](https://asciinema.org/a/vS5zDfo6wI4ijS871sDs93Hak.svg)](https://asciinema.org/a/vS5zDfo6wI4ijS871sDs93Hak)
+[![asciicast](https://asciinema.org/a/VYVoarTnB3TTbmgv1MGWrkJHy.svg)](https://asciinema.org/a/VYVoarTnB3TTbmgv1MGWrkJHy)
 
 ### asciinema brain-prime
-[![asciicast](https://asciinema.org/a/syTEhskuM7M2f2NcRMfWvwNpF.svg)](https://asciinema.org/a/syTEhskuM7M2f2NcRMfWvwNpF)
+[![asciicast](https://asciinema.org/a/a6gJ5noTeeoqfyl6M295l2EwB.svg)](https://asciinema.org/a/a6gJ5noTeeoqfyl6M295l2EwB)
