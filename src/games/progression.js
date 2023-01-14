@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { getRandomInRange } from '../utils.js';
+import getRandomInRange from '../utils.js';
 import {
   engine,
 } from '../index.js';
@@ -19,11 +19,10 @@ const runProgressionGame = () => {
     const correctAnswer = array[correctAnswerIndex];
     array[correctAnswerIndex] = '..';
     const question = array.join(' ');
-    //const answer = getAnswer(question);
+    // const answer = getAnswer(question);
 
     return [question, correctAnswer.toString()];
-  }
+  };
   engine(terms, getAnswer);
-
 };
 export default runProgressionGame;

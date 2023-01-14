@@ -1,7 +1,7 @@
 #!/usr/bin/env node
-import { getRandomInRange } from '../utils.js';
+import getRandomInRange from '../utils.js';
 import {
-  engine
+  engine,
 } from '../index.js';
 
 const runEvenGame = () => {
@@ -17,9 +17,7 @@ const runEvenGame = () => {
     const question = number;
 
     return [question, correctAnswer];
-
-  }
+  };
   engine(terms, getAnswer);
-
 };
 export default runEvenGame;
