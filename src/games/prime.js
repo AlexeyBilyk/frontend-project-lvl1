@@ -1,35 +1,31 @@
 #!/usr/bin/env node
+import { getRandomInRange } from '../utils.js';
 import {
-  Welcome, rndNum, getAnswer, wrongAnswer,
+  engine,
 } from '../index.js';
 
 const runPrimeGame = () => {
-  const name = Welcome();
-  console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
-  for (let i = 0; i < 3; i += 1) {
-    const number = rndNum(2, 100);
-    const answer = getAnswer(number);
-    let corrAnswer = '';
-    if (number <= 2) {
-      corrAnswer = 'yes';
+  const terms = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+  const getAnswer = () => {
+    //const number = getRandomInRange(2, 100);
+    const question = getRandomInRange(2, 100);
+    //const answer = getAnswer(number);
+    let correctAnswer = '';
+    if (question <= 2) {
+      correctAnswer = 'yes';
     }
-    for (let y = 2; y < number; y += 1) {
-      if (number % y === 0) {
-        corrAnswer = 'no';
+    for (let y = 2; y < question; y += 1) {
+      if (question % y === 0) {
+        correctAnswer = 'no';
         break;
       } else {
-        corrAnswer = 'yes';
+        correctAnswer = 'yes';
       }
     }
-    if (answer === corrAnswer) {
-      console.log('Correct!');
-    } else {
-      wrongAnswer(name, answer, corrAnswer);
-      break;
-    }
-    if (i === 2) {
-      console.log(`Congratulations, ${name}!`);
-    }
+
+    return [question, correctAnswer];
+
   }
+  engine(terms, getAnswer);
 };
 export default runPrimeGame;

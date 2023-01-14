@@ -1,29 +1,25 @@
 #!/usr/bin/env node
+import { getRandomInRange } from '../utils.js';
 import {
-  Welcome, rndNum, getAnswer, wrongAnswer,
+  engine
 } from '../index.js';
 
 const runEvenGame = () => {
-  const name = Welcome();
-  console.log('Answer "yes" if the number is even, otherwise answer "no".');
-  for (let i = 0; i < 3; i += 1) {
-    const number = rndNum(1, 100);
-    const answer = getAnswer(number);
-    let corrAnswer = '';
+  const terms = 'Answer "yes" if the number is even, otherwise answer "no".';
+  const getAnswer = () => {
+    const number = getRandomInRange(1, 100);
+    let correctAnswer = '';
     if (number % 2 === 0) {
-      corrAnswer = 'yes';
+      correctAnswer = 'yes';
     } else {
-      corrAnswer = 'no';
+      correctAnswer = 'no';
     }
-    if (answer === corrAnswer) {
-      console.log('Correct!');
-    } else {
-      wrongAnswer(name, answer, corrAnswer);
-      break;
-    }
-    if (i === 2) {
-      console.log(`Congratulations, ${name}!`);
-    }
+    const question = number;
+
+    return [question, correctAnswer];
+
   }
+  engine(terms, getAnswer);
+
 };
 export default runEvenGame;

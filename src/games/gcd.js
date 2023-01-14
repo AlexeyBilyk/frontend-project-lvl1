@@ -1,27 +1,21 @@
 #!/usr/bin/env node
+import { getRandomInRange } from '../utils.js';
 import {
-  Welcome, rndNum, getAnswer, wrongAnswer, getCorrectGCD,
+  welcome, getAnswer, wrongAnswer, getCorrectGCD, engine,
 } from '../index.js';
 
 const runGCDgame = () => {
-  const name = Welcome();
-  console.log('Find the greatest common divisor of given numbers.');
-  for (let i = 0; i < 3; i += 1) {
-    const firstNumber = rndNum(1, 100);
-    const secondNumber = rndNum(1, 100);
+  const terms = 'Find the greatest common divisor of given numbers.';
+  const getAnswer = () => {
+    const firstNumber = getRandomInRange(1, 100);
+    const secondNumber = getRandomInRange(1, 100);
     const question = `${firstNumber} ${secondNumber}`;
-    const answer = getAnswer(question);
     const correctAnswer = getCorrectGCD(firstNumber, secondNumber);
 
-    if (correctAnswer.toString() === answer.toString()) {
-      console.log('Correct!');
-    } else {
-      wrongAnswer(name, answer, correctAnswer);
-      break;
-    }
-    if (i === 2) {
-      console.log(`Congratulations, ${name}!`);
-    }
+    
+    return [question, correctAnswer.toString()];
+
   }
+  engine(terms, getAnswer);
 };
 export default runGCDgame;

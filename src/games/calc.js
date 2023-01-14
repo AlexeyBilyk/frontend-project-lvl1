@@ -1,37 +1,28 @@
 #!/usr/bin/env node
-import {
-  Welcome, rndNum, getAnswer, wrongAnswer,
-} from '../index.js';
+import { getRandomInRange } from '../utils.js';
+import { engine } from '../index.js';
 
-const runCulcGame = () => {
-  const name = Welcome();
-  console.log('What is the result of the expression?');
-  for (let i = 0; i < 3; i += 1) {
-    const firstNumber = rndNum(1, 100);
-    const secondNumber = rndNum(1, 100);
-    const operators = ['+', '-', '*'];
-    const operatorInd = Math.floor(Math.random() * operators.length);
-    const operator = operators[operatorInd];
+const runCalcGame = () => {
+  const terms = 'What is the result of the expression?';
 
-    const question = `${firstNumber} ${operator} ${secondNumber}`;
-    let correctAnswer = 0;
-    if (operatorInd === 0) {
-      correctAnswer = firstNumber + secondNumber;
-    } else if (operatorInd === 1) {
-      correctAnswer = firstNumber - secondNumber;
-    } else {
-      correctAnswer = firstNumber * secondNumber;
-    }
-    const answer = getAnswer(question);
-    if (correctAnswer.toString() === answer.toString()) {
-      console.log('Correct!');
-    } else {
-      wrongAnswer(name, answer, correctAnswer);
-      break;
-    }
-    if (i === 2) {
-      console.log(`Congratulations, ${name}!`);
-    }
+  const getAnswer = () => {
+  const firstNumber = getRandomInRange(1, 100);
+  const secondNumber = getRandomInRange(1, 100);
+  const operators = ['+', '-', '*'];
+  const operatorInd = Math.floor(Math.random() * operators.length);
+  const operator = operators[operatorInd];
+
+  const question = `${firstNumber} ${operator} ${secondNumber}`;
+  let correctAnswer = 0;
+  if (operatorInd === 0) {
+    correctAnswer = firstNumber + secondNumber;
+  } else if (operatorInd === 1) {
+    correctAnswer = firstNumber - secondNumber;
+  } else {
+    correctAnswer = firstNumber * secondNumber;
   }
+    return [question, correctAnswer.toString()];
+  }
+  engine(terms, getAnswer);
 };
-export default runCulcGame;
+export default runCalcGame;
