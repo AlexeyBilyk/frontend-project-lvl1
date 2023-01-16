@@ -10,7 +10,7 @@ const calculation = (num1, num2, operator) => {
       return num1 - num2;
     case '*':
       return num1 * num2;
-    default: throw new Error('Operator {operator} - doesn\'t supported');
+    default: throw new Error(`Operator '${operator}' - doesn't supported`);
   }
 };
 
