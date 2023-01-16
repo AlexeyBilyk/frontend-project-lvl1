@@ -1,23 +1,26 @@
 #!/usr/bin/env node
 import getRandomInRange from '../utils.js';
-import {
-  engine,
-} from '../index.js';
+import { engine } from '../index.js';
+
+const isEven = (randomNumber) => {
+  let correctAnswer = '';
+  if (randomNumber % 2 === 0) {
+    correctAnswer = 'yes';
+  } else {
+    correctAnswer = 'no';
+  }
+  return correctAnswer;
+};
 
 const runEvenGame = () => {
   const terms = 'Answer "yes" if the number is even, otherwise answer "no".';
-  const getAnswer = () => {
+  const generateRound = () => {
     const number = getRandomInRange(1, 100);
-    let correctAnswer = '';
-    if (number % 2 === 0) {
-      correctAnswer = 'yes';
-    } else {
-      correctAnswer = 'no';
-    }
+    const correctAnswer = isEven(number);
     const question = number;
 
     return [question, correctAnswer];
   };
-  engine(terms, getAnswer);
+  engine(terms, generateRound);
 };
 export default runEvenGame;

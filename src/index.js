@@ -7,21 +7,13 @@ export const welcome = () => {
   return name;
 };
 
-export const getCorrectGCD = (firstNumber, secondNumber) => {
-  if (!secondNumber) {
-    return firstNumber;
-  }
-  return getCorrectGCD(secondNumber, firstNumber % secondNumber);
-};
-
-export const engine = (terms, getAnswer) => {
+export const engine = (terms, generateRound) => {
   const name = welcome();
   console.log(terms);
 
-  let round = 1;
   const roundsCount = 3;
-  while (round <= roundsCount) {
-    const [question, expectedAnswer] = getAnswer();
+  for (let i = 0; i < roundsCount; i += 1) {
+    const [question, expectedAnswer] = generateRound();
     console.log(`Question: ${question}`);
 
     const userAnswer = readlineSync.question('Your answer: ');
@@ -32,7 +24,6 @@ export const engine = (terms, getAnswer) => {
       console.log(`'${userAnswer}' is wrong answer ;( Correct answer was '${expectedAnswer}'. Let's try again, ${name}!`);
       return;
     }
-    round += 1;
   }
   console.log(`Congratulations, ${name}!`);
 };

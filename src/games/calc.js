@@ -2,27 +2,31 @@
 import getRandomInRange from '../utils.js';
 import { engine } from '../index.js';
 
+const calculation = (num1, num2, operator) => {
+  switch (operator) {
+    case '+':
+      return num1 + num2;
+    case '-':
+      return num1 - num2;
+    case '*':
+      return num1 * num2;
+    default: throw new Error('Operator {operator} - doesn\'t supported');
+  }
+};
+
 const runCalcGame = () => {
   const terms = 'What is the result of the expression?';
 
-  const getAnswer = () => {
+  const generateRound = () => {
     const firstNumber = getRandomInRange(1, 100);
     const secondNumber = getRandomInRange(1, 100);
     const operators = ['+', '-', '*'];
-    const operatorInd = Math.floor(Math.random() * operators.length);
-    const operator = operators[operatorInd];
+    const randomOperator = operators[getRandomInRange(0, operators.length - 1)];
+    const question = `${firstNumber} ${randomOperator} ${secondNumber}`;
 
-    const question = `${firstNumber} ${operator} ${secondNumber}`;
-    let correctAnswer = 0;
-    if (operatorInd === 0) {
-      correctAnswer = firstNumber + secondNumber;
-    } else if (operatorInd === 1) {
-      correctAnswer = firstNumber - secondNumber;
-    } else {
-      correctAnswer = firstNumber * secondNumber;
-    }
-    return [question, correctAnswer.toString()];
+    const correctAnswer = calculation(firstNumber, secondNumber, randomOperator).toString();
+    return [question, correctAnswer];
   };
-  engine(terms, getAnswer);
+  engine(terms, generateRound);
 };
 export default runCalcGame;
